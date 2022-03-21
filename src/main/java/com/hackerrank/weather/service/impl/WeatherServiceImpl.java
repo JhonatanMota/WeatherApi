@@ -42,9 +42,9 @@ public class WeatherServiceImpl implements WeatherService {
 
     Sort sort = Sort.by("id");
     if (sortMethod != null && !sortMethod.isEmpty())
-      if (sortMethod.equals("date"))
+      if ("date".equals(sortMethod))
         sort = Sort.by("date");
-      else if (sortMethod.equals("-date"))
+      else if ("-date".equals(sortMethod))
         sort = Sort.by("date").descending();
 
     if (date != null && !date.isEmpty()) {
